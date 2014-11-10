@@ -1,0 +1,18 @@
+<?php
+require_once "PHPUnit/Autoload.php";
+require_once "calculator.php";
+class Test_calculator extends PHPUnit_Framework_TestCase
+{
+    // test the talk method
+    public function testSumma() {
+        // make an instance of the user
+        $cal = new calculator();
+ 
+        // use assertEquals to ensure the greeting is what you
+        $expected = 4;
+        $actual = $cal->summa(2,2);
+        $this->assertEquals($expected, $actual);
+    }
+}
+
+?>
